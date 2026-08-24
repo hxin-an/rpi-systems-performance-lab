@@ -53,10 +53,10 @@
 
 ### W1-2 開發工具與環境盤點
 
-- [ ] 安裝或確認 GCC、GDB、Git、Make、CMake、Python 與 `perf`
-- [ ] 記錄工具版本
-- [ ] 確認 `perf` 在 Pi 3B+／目前 kernel 可使用的 events
-- [ ] 記錄不支援或權限不足的 events，不以零值冒充有效結果
+- [x] 安裝或確認 GCC、GDB、Git、Make、CMake、Python 與 `perf`
+- [x] 記錄工具版本
+- [x] 確認 `perf` 在 Pi 3B+／目前 kernel 可使用的 events
+- [x] 記錄不支援或權限不足的 events，不以零值冒充有效結果
 
 產出：`results/tool_versions.txt` 與 `docs/perf-capabilities.md`。
 
