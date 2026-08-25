@@ -1,0 +1,93 @@
+# Raspberry Pi Systems & Performance Lab
+# System information report
+
+[capture]
+captured_at=2026-08-25T21:23:58+08:00
+hostname=rpi-lab
+collector=scripts/system_info.sh
+
+[operating_system]
+pretty_name=Debian GNU/Linux 13 (trixie)
+version_codename=trixie
+kernel_release=6.18.39+rpt-rpi-v8
+kernel_machine=aarch64
+
+[cpu]
+architecture=aarch64
+model_name=Cortex-A53
+online_cores=4
+byte_order=Little Endian
+isa_features=fp asimd evtstrm crc32 cpuid
+
+[cpu_frequency]
+cpu0.scaling_governor=ondemand
+cpu0.scaling_cur_freq=1400000
+cpu0.scaling_min_freq=600000
+cpu0.scaling_max_freq=1400000
+cpu1.scaling_governor=ondemand
+cpu1.scaling_cur_freq=1400000
+cpu1.scaling_min_freq=600000
+cpu1.scaling_max_freq=1400000
+cpu2.scaling_governor=ondemand
+cpu2.scaling_cur_freq=1400000
+cpu2.scaling_min_freq=600000
+cpu2.scaling_max_freq=1400000
+cpu3.scaling_governor=ondemand
+cpu3.scaling_cur_freq=1400000
+cpu3.scaling_min_freq=600000
+cpu3.scaling_max_freq=1400000
+
+[cache]
+index0.level=1
+index0.type=Data
+index0.size=32K
+index0.coherency_line_size=64
+index0.ways_of_associativity=4
+index0.shared_cpu_list=0
+index1.level=1
+index1.type=Instruction
+index1.size=32K
+index1.coherency_line_size=64
+index1.ways_of_associativity=2
+index1.shared_cpu_list=0
+index2.level=2
+index2.type=Unified
+index2.size=512K
+index2.coherency_line_size=64
+index2.ways_of_associativity=16
+index2.shared_cpu_list=0-3
+
+[memory]
+MemTotal:         926828 kB
+MemFree:          566988 kB
+MemAvailable:     765572 kB
+Buffers:           16276 kB
+Cached:           223400 kB
+SwapTotal:        926716 kB
+SwapFree:         926716 kB
+
+[thermal]
+thermal_zone0.type=cpu-thermal
+thermal_zone0.temp_millicelsius=41856
+thermal_zone0.temp_celsius=41.9
+
+[runtime]
+uptime_seconds=389.01
+idle_seconds_total=1472.31
+load_average=0.04 0.15 0.09 1/137 1439
+
+[toolchain]
+gcc=gcc (Debian 14.2.0-19) 14.2.0
+g++=g++ (Debian 14.2.0-19) 14.2.0
+make=GNU Make 4.4.1
+cmake=cmake version 3.31.6
+gdb=GNU gdb (Debian 16.3-1) 16.3
+git=git version 2.47.3
+python=Python 3.13.5
+perf=perf version 6.18.39
+objdump=GNU objdump (GNU Binutils for Debian) 2.44
+
+[collection]
+warnings=0
+errors=0
+status=ok

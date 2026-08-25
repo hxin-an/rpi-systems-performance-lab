@@ -62,11 +62,11 @@
 
 ### W1-3 System information collector
 
-- [ ] 撰寫 `scripts/system_info.sh`
-- [ ] 收集 CPU model、ISA、core count、kernel、OS、frequency、governor、cache、memory、temperature 與 compiler 版本
-- [ ] 指令失敗時留下可判讀訊息並回傳非零狀態
-- [ ] 將輸出保存為 `results/system_info.txt`
-- [ ] 在乾淨 shell 中重跑並確認結果可重現
+- [x] 撰寫 `scripts/system_info.sh`
+- [x] 收集 CPU model、ISA、core count、kernel、OS、frequency、governor、cache、memory、temperature 與 compiler 版本
+- [x] 指令失敗時留下可判讀訊息並回傳非零狀態
+- [x] 將輸出保存為 `results/system_info.txt`
+- [x] 在乾淨 shell 中重跑並確認結果可重現
 
 產出：`scripts/system_info.sh`、`results/system_info.txt`。
 
@@ -197,7 +197,6 @@ baseline
 
 ## 7. 下一個動作
 
-1. 使用 `ssh rpi` 登入板子。
-2. 建立 repository scaffold。
-3. 安裝並記錄 GCC、GDB、Git、Make、CMake、Python 與 `perf`。
-4. 開始 `scripts/system_info.sh`。
+1. 在 Raspberry Pi 上 clone repository，並親自執行 `scripts/system_info.sh`。
+2. 閱讀報告，確認 `/proc`、`/sys` 與各硬體欄位的來源。
+3. 開始 W1-4 GDB Debug Lab。
