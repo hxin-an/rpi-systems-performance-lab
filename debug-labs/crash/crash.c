@@ -32,12 +32,21 @@ static void print_sensor(const Sensor *sensor)
     printf("%s: latest sample = %d\n", sensor->name, sample);
 }
 
-static void process_request(const Sensor *sensors,
-                            size_t sensor_count,
-                            const char *requested_name)
+static int process_request(const Sensor *sensors,
+                           size_t sensor_count,
+                           const char *requested_name)
 {
-    const Sensor *sensor = find_sensor(sensors, sensor_count, requested_name);
+    const Sensor *sensor =
+        find_sensor(sensors, sensor_count, requested_name);
+
+    if (sensor == NULL) {
+        fprintf(stderr, "sensor not found: %s\n", requested_name);
+        return 1;
+    }
+
     print_sensor(sensor);
+    return 0;
+
 }
 
 int main(int argc, char **argv)
@@ -50,8 +59,7 @@ int main(int argc, char **argv)
     };
     const char *requested_name = argc > 1 ? argv[1] : "ambient";
 
-    process_request(sensors,
+    return process_request(sensors,
                     sizeof(sensors) / sizeof(sensors[0]),
                     requested_name);
-    return 0;
 }
